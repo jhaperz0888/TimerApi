@@ -58,7 +58,7 @@ router.post("/logs", async (req, res) => {
 
 router.get("/logs", async (req, res) => {
   try {
-    const insertLogs = `SELECT id, timestamp, log_type FROM logs`;
+    const insertLogs = `SELECT id, timestamp, log_type FROM logs WHERE status = 1`;
     var result = await queryServices(insertLogs);
 
     // 2009-10-16T23:45:20.000Z
