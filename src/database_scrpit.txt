@@ -1,0 +1,12 @@
+
+CREATE DATABASE `timer` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */
+
+CREATE TABLE `logs` (
+ `id` int NOT NULL AUTO_INCREMENT,
+ `timestamp` datetime NOT NULL,
+ `log_type` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'start',
+ `status` int NOT NULL DEFAULT '1' COMMENT '0 - deleted, 1 - active',
+ `created_at` datetime NOT NULL DEFAULT '1000-10-10 00:00:00',
+ `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
